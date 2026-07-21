@@ -1,11 +1,10 @@
 services:
   frontend:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
 
-    container_name: mi-portafolio
-    ports:
-      - "80:80"
-    restart: unless-stopped
+    expose:
+      - "80"
 
+    restart: unless-stopped
